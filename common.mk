@@ -8,14 +8,20 @@ QCONFIG=qconfig.mk
 endif
 include $(QCONFIG)
 
+#===== USEFILE - the file containing the usage message for the application. 
 USEFILE=
 
 # Next lines are for C++ projects only
 EXTRA_SUFFIXES+=cxx cpp
+#===== LDFLAGS - add the flags to the linker command line.
 LDFLAGS+=-lang-c++
 VFLAG_g=-gstabs+
 
 
+#===== LIBS - a space-separated list of library items to be included in the link.
+LIBS+=c socket cpt_terminal ph
+#===== EXTRA_LIBVPATH - a space-separated list of directories to search for library files.
+EXTRA_LIBVPATH+=/home/martin/workspace/Transferstrecke/lib
 include $(MKFILES_ROOT)/qmacros.mk
 #QNX internal start
 ifeq ($(filter g, $(VARIANT_LIST)),g)
@@ -64,5 +70,5 @@ BUILDNAME_SAR:= $(patsubst %$(IMAGE_SUFF_$(BUILD_TYPE)),%S.a,$(BUILDNAME))
 POST_BUILD:=$($(call EXPRESSION,POST_BUILD))
 #QNX internal end
 include $(MKFILES_ROOT)/qtargets.mk
-OPTIMIZE_TYPE_g=none
 OPTIMIZE_TYPE=$(OPTIMIZE_TYPE_$(filter g, $(VARIANTS)))
+OPTIMIZE_TYPE_g=none

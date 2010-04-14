@@ -13,26 +13,53 @@
 <buildTargets>
 <target name="build" path="" targetID="com.qnx.tools.ide.qde.core.cbuilder">
 <buildCommand>make</buildCommand>
-<buildArguments></buildArguments>
+<buildArguments/>
 <buildTarget>all</buildTarget>
 <stopOnError>false</stopOnError>
 <useDefaultCommand>true</useDefaultCommand>
 </target>
 <target name="clean" path="" targetID="com.qnx.tools.ide.qde.core.cbuilder">
 <buildCommand>make</buildCommand>
-<buildArguments></buildArguments>
+<buildArguments/>
 <buildTarget>clean</buildTarget>
 <stopOnError>false</stopOnError>
 <useDefaultCommand>true</useDefaultCommand>
 </target>
 <target name="rebuild" path="" targetID="com.qnx.tools.ide.qde.core.cbuilder">
 <buildCommand>make</buildCommand>
-<buildArguments></buildArguments>
+<buildArguments/>
 <buildTarget>clean all</buildTarget>
 <stopOnError>false</stopOnError>
 <useDefaultCommand>true</useDefaultCommand>
 </target>
 </buildTargets>
+</item>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<item id="com.qnx.tools.ide.qde.core.QNXProjectProperties">
+<makefile value="Makefile"/>
+<command value="make"/>
+<code_coverage value="false"/>
+<profiling value="false"/>
+<dep_check value="false"/>
+<type value="1"/>
+<active_configurations>
+<configuration value="_x86_r"/>
+<configuration value="_x86_g"/>
+</active_configurations>
 </item>
 </data>
 </cdtproject>
